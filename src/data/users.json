@@ -1,0 +1,59 @@
+[
+  {
+    "id": "admin-1",
+    "role": "admin",
+    "email": "admin@papi.test",
+    "password": "Admin@123",
+    "name": "Papi Admin",
+    "status": "active"
+  },
+  {
+    "id": "buyer-1",
+    "role": "buyer",
+    "email": "buyer1@papi.test",
+    "password": "Buyer@123",
+    "name": "Test Buyer",
+    "phone": "+91 98765 43210",
+    "address": "123 Green Street, Delhi",
+    "pincode": "110001",
+    "status": "active"
+  },
+  {
+    "id": "buyer-2",
+    "role": "buyer",
+    "email": "buyer2@papi.test",
+    "password": "Buyer@123",
+    "name": "Priya Sharma",
+    "phone": "+91 87654 32109",
+    "address": "45 Market Road, Mumbai",
+    "pincode": "400001",
+    "status": "active"
+  },
+  {
+    "id": "seller-1",
+    "role": "seller",
+    "email": "seller1@papi.test",
+    "password": "Seller@123",
+    "name": "Rajesh Kumar",
+    "businessName": "Green Farms",
+    "address": "Farm House, Rohtak Road, Delhi",
+    "pincode": "110085",
+    "phone": "+91 99999 11111",
+    "organicCertification": "OC-2024-001",
+    "status": "active"
+  },
+  {
+    "id": "seller-2",
+    "role": "seller",
+    "email": "seller2@papi.test",
+    "password": "Seller@123",
+    "name": "Suresh Patil",
+    "businessName": "Fresh Harvest",
+    "address": "Village Farms, Pune",
+    "pincode": "411001",
+    "phone": "+91 88888 22222",
+    "organicCertification": "OC-2024-002",
+    "status": "active"
+  }
+]
+

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "prod-1",
+    "sellerId": "seller-1",
+    "sellerName": "Green Farms",
+    "name": "Organic Tomatoes",
+    "category": "vegetables",
+    "unit": "Kg",
+    "price": 80,
+    "stock": 120,
+    "image": "/images/tomatoes.jpg",
+    "description": "Fresh local organic tomatoes. Perfect for salads, cooking, and sauces. Grown without pesticides."
+  },
+  {
+    "id": "prod-2",
+    "sellerId": "seller-1",
+    "sellerName": "Green Farms",
+    "name": "Fresh Spinach",
+    "category": "leafy-greens",
+    "unit": "Bundle",
+    "price": 30,
+    "stock": 50,
+    "image": "/images/spinach.jpg",
+    "description": "Fresh organic spinach bundles. Rich in iron and vitamins. Perfect for cooking or salads."
+  },
+  {
+    "id": "prod-3",
+    "sellerId": "seller-2",
+    "sellerName": "Fresh Harvest",
+    "name": "Organic Carrots",
+    "category": "root-vegetables",
+    "unit": "Kg",
+    "price": 60,
+    "stock": 80,
+    "image": "/images/carrots.jpg",
+    "description": "Fresh organic carrots. Sweet and crunchy. Perfect for snacking, salads, and cooking."
+  },
+  {
+    "id": "prod-4",
+    "sellerId": "seller-2",
+    "sellerName": "Fresh Harvest",
+    "name": "Red Apples",
+    "category": "fruits",
+    "unit": "Kg",
+    "price": 150,
+    "stock": 100,
+    "image": "/images/apples.jpg",
+    "description": "Fresh crisp red apples. Sweet and juicy. Perfect for snacking and desserts."
+  },
+  {
+    "id": "prod-5",
+    "sellerId": "seller-1",
+    "sellerName": "Green Farms",
+    "name": "Green Capsicum",
+    "category": "vegetables",
+    "unit": "Kg",
+    "price": 70,
+    "stock": 60,
+    "image": "/images/capsicum.jpg",
+    "description": "Fresh green bell peppers. Great for stir-fries, salads, and grilling."
+  },
+  {
+    "id": "prod-6",
+    "sellerId": "seller-2",
+    "sellerName": "Fresh Harvest",
+    "name": "Bananas",
+    "category": "fruits",
+    "unit": "Dozen",
+    "price": 50,
+    "stock": 150,
+    "image": "/images/bananas.jpg",
+    "description": "Fresh ripe bananas. Perfect for smoothies, breakfast, and snacking."
+  },
+  {
+    "id": "prod-7",
+    "sellerId": "seller-1",
+    "sellerName": "Green Farms",
+    "name": "Potatoes",
+    "category": "root-vegetables",
+    "unit": "Kg",
+    "price": 40,
+    "stock": 200,
+    "image": "/images/potatoes.jpg",
+    "description": "Fresh organic potatoes. Perfect for cooking, baking, and frying."
+  },
+  {
+    "id": "prod-8",
+    "sellerId": "seller-2",
+    "sellerName": "Fresh Harvest",
+    "name": "Onions",
+    "category": "vegetables",
+    "unit": "Kg",
+    "price": 35,
+    "stock": 180,
+    "image": "/images/onions.jpg",
+    "description": "Fresh red onions. Essential ingredient for most Indian dishes."
+  }
+]
+

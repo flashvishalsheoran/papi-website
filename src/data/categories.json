@@ -1,0 +1,31 @@
+[
+  {
+    "id": "cat-1",
+    "name": "Vegetables",
+    "slug": "vegetables",
+    "description": "Fresh organic vegetables",
+    "image": "/images/vegetables.jpg"
+  },
+  {
+    "id": "cat-2",
+    "name": "Fruits",
+    "slug": "fruits",
+    "description": "Fresh seasonal fruits",
+    "image": "/images/fruits.jpg"
+  },
+  {
+    "id": "cat-3",
+    "name": "Leafy Greens",
+    "slug": "leafy-greens",
+    "description": "Fresh leafy greens and herbs",
+    "image": "/images/leafy-greens.jpg"
+  },
+  {
+    "id": "cat-4",
+    "name": "Root Vegetables",
+    "slug": "root-vegetables",
+    "description": "Fresh root vegetables",
+    "image": "/images/root-vegetables.jpg"
+  }
+]
+

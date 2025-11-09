@@ -1,0 +1,77 @@
+[
+  {
+    "id": "order-1",
+    "buyerId": "buyer-1",
+    "buyerName": "Test Buyer",
+    "sellerId": "seller-1",
+    "sellerName": "Green Farms",
+    "items": [
+      {
+        "productId": "prod-1",
+        "productName": "Organic Tomatoes",
+        "qty": 2,
+        "unit": "Kg",
+        "unitPrice": 80
+      },
+      {
+        "productId": "prod-2",
+        "productName": "Fresh Spinach",
+        "qty": 3,
+        "unit": "Bundle",
+        "unitPrice": 30
+      }
+    ],
+    "totalAmount": 250,
+    "status": "Pending",
+    "createdAt": "2025-11-08T10:00:00.000Z",
+    "notes": "Please deliver in the morning"
+  },
+  {
+    "id": "order-2",
+    "buyerId": "buyer-2",
+    "buyerName": "Priya Sharma",
+    "sellerId": "seller-2",
+    "sellerName": "Fresh Harvest",
+    "items": [
+      {
+        "productId": "prod-4",
+        "productName": "Red Apples",
+        "qty": 1,
+        "unit": "Kg",
+        "unitPrice": 150
+      }
+    ],
+    "totalAmount": 150,
+    "status": "Confirmed",
+    "createdAt": "2025-11-07T14:30:00.000Z",
+    "notes": ""
+  },
+  {
+    "id": "order-3",
+    "buyerId": "buyer-1",
+    "buyerName": "Test Buyer",
+    "sellerId": "seller-2",
+    "sellerName": "Fresh Harvest",
+    "items": [
+      {
+        "productId": "prod-3",
+        "productName": "Organic Carrots",
+        "qty": 2,
+        "unit": "Kg",
+        "unitPrice": 60
+      },
+      {
+        "productId": "prod-6",
+        "productName": "Bananas",
+        "qty": 2,
+        "unit": "Dozen",
+        "unitPrice": 50
+      }
+    ],
+    "totalAmount": 220,
+    "status": "Delivered",
+    "createdAt": "2025-11-05T09:15:00.000Z",
+    "notes": "Leave at door"
+  }
+]
+
