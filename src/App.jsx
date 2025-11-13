@@ -81,67 +81,37 @@ function AppRoutes() {
         }
       />
 
-      {/* Product Details - accessible to all authenticated users */}
-      <Route
-        path="/products/:id"
-        element={
-          <ProtectedRoute>
-            <AppLayout>
-              <ProductDetails />
-            </AppLayout>
-          </ProtectedRoute>
-        }
-      />
-
-      {/* Buyer Routes */}
+      {/* Buyer Routes - No Authentication Required */}
       <Route
         path="/buyer"
         element={
-          <ProtectedRoute allowedRoles={['buyer']}>
-            <AppLayout>
-              <BuyerHome />
-            </AppLayout>
-          </ProtectedRoute>
+          <AppLayout>
+            <BuyerHome />
+          </AppLayout>
         }
       />
       <Route
         path="/buyer/browse"
         element={
-          <ProtectedRoute allowedRoles={['buyer']}>
-            <AppLayout>
-              <Browse />
-            </AppLayout>
-          </ProtectedRoute>
+          <AppLayout>
+            <Browse />
+          </AppLayout>
+        }
+      />
+      <Route
+        path="/products/:id"
+        element={
+          <AppLayout>
+            <ProductDetails />
+          </AppLayout>
         }
       />
       <Route
         path="/buyer/cart"
         element={
-          <ProtectedRoute allowedRoles={['buyer']}>
-            <AppLayout>
-              <Cart />
-            </AppLayout>
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/buyer/orders"
-        element={
-          <ProtectedRoute allowedRoles={['buyer']}>
-            <AppLayout>
-              <Orders />
-            </AppLayout>
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/buyer/profile"
-        element={
-          <ProtectedRoute allowedRoles={['buyer']}>
-            <AppLayout>
-              <Profile />
-            </AppLayout>
-          </ProtectedRoute>
+          <AppLayout>
+            <Cart />
+          </AppLayout>
         }
       />
 

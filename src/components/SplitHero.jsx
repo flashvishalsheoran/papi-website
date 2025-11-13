@@ -9,7 +9,7 @@ export default function SplitHero() {
       <div className="grid h-full md:grid-cols-2">
         {/* Buyer Panel */}
         <div
-          onClick={() => navigate('/auth/login?role=buyer')}
+          onClick={() => navigate('/buyer')}
           className="group relative flex cursor-pointer items-center justify-start overflow-hidden bg-gradient-to-br from-green-50 to-green-100 transition-all duration-500 hover:scale-105"
           style={{
             backgroundImage: 'url(/images/buyer-hero.jpg)',
