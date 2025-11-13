@@ -15,6 +15,7 @@ export default function ProductDetails() {
   const { addToCart } = useCart()
   const { isBuyer } = useAuth()
   const [quantity, setQuantity] = useState(1)
+  const [addedToCart, setAddedToCart] = useState(false)
 
   const product = productsAPI.getById(id)
 
@@ -30,6 +31,12 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
+    addToCart(product, quantity)
+    setAddedToCart(true)
+    setTimeout(() => setAddedToCart(false), 2000) // Reset after 2 seconds
+  }
+
+  const handleBuyNow = () => {
     addToCart(product, quantity)
     navigate('/buyer/cart')
   }
@@ -104,9 +111,9 @@ export default function ProductDetails() {
               </CardContent>
             </Card>
 
-            {isBuyer && product.stock > 0 && (
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
+            {product.stock > 0 ? (
+              <div className="space-y-4 rounded-lg bg-white p-6 shadow-sm">
+                <div className="flex items-center justify-between">
                   <span className="font-medium">Quantity:</span>
                   <div className="flex items-center gap-2">
                     <Button
@@ -127,13 +134,25 @@ export default function ProductDetails() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <Button onClick={handleAddToCart} className="flex-1" size="lg">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <Button
+                    onClick={handleAddToCart}
+                    variant="outline"
+                    size="lg"
+                    className="w-full"
+                  >
                     <ShoppingCart className="mr-2 h-5 w-5" />
-                    Add to Cart
+                    {addedToCart ? 'Added!' : 'Add to Cart'}
+                  </Button>
+                  <Button onClick={handleBuyNow} size="lg" className="w-full">
+                    Buy Now
                   </Button>
                 </div>
               </div>
+            ) : (
+              <Button size="lg" disabled className="w-full">
+                Out of Stock
+              </Button>
             )}
           </div>
         </div>

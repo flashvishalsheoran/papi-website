@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { ShoppingCart, Package, Star, TrendingUp, Heart } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { ShoppingCart, Package, Star, TrendingUp, Heart, ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter } from './ui/Card'
 import Button from './ui/Button'
 import Badge from './ui/Badge'
@@ -10,12 +10,19 @@ import { useState } from 'react'
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart()
+  const navigate = useNavigate()
   const { isBuyer } = useAuth()
   const [isLiked, setIsLiked] = useState(false)
 
   const handleAddToCart = (e) => {
     e.preventDefault()
     addToCart(product, 1)
+  }
+
+  const handleOrderNow = (e) => {
+    e.preventDefault()
+    addToCart(product, 1)
+    navigate('/buyer/cart')
   }
 
   const handleLike = (e) => {
@@ -79,9 +86,9 @@ export default function ProductCard({ product }) {
           </button>
 
           {/* Quick view badge on hover */}
-          <div className="absolute bottom-4 left-1/2 z-20 -translate-x-1/2 transform opacity-0 transition-all duration-300 group-hover:bottom-6 group-hover:opacity-100">
-            <div className="rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm">
-              Click to view details
+          <div className="absolute bottom-4 left-1/2 z-20 flex w-[calc(100%-2rem)] -translate-x-1/2 transform items-center justify-center opacity-0 transition-all duration-300 group-hover:bottom-6 group-hover:opacity-100">
+            <div className="flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm">
+              View Details <ArrowRight className="h-4 w-4" />
             </div>
           </div>
         </div>
@@ -129,24 +136,31 @@ export default function ProductCard({ product }) {
           </div>
         </CardContent>
 
-        <CardFooter className="relative z-10 p-5 pt-0">
-          {isBuyer && product.stock > 0 ? (
-            <Button 
-              className="group/btn relative w-full overflow-hidden bg-gradient-to-r from-green-600 to-green-700 shadow-lg transition-all duration-300 hover:from-green-700 hover:to-green-800 hover:shadow-xl" 
-              onClick={handleAddToCart}
-            >
-              {/* Button shine effect */}
-              <div className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover/btn:translate-x-[100%]"></div>
-              <ShoppingCart className="relative mr-2 h-4 w-4 transition-transform duration-300 group-hover/btn:scale-110" />
-              <span className="relative">Add to Cart</span>
-            </Button>
+        <CardFooter className="relative z-10 grid grid-cols-2 gap-3 p-5 pt-0">
+          {product.stock > 0 ? (
+            <>
+              <Button
+                className="group/btn relative w-full overflow-hidden"
+                variant="outline"
+                onClick={handleAddToCart}
+              >
+                <ShoppingCart className="relative mr-2 h-4 w-4" />
+                <span className="relative">Add to Cart</span>
+              </Button>
+              <Button
+                className="group/btn relative w-full overflow-hidden bg-gradient-to-r from-green-600 to-green-700 shadow-lg transition-all duration-300 hover:from-green-700 hover:to-green-800 hover:shadow-xl"
+                onClick={handleOrderNow}
+              >
+                <span className="relative">Order Now</span>
+              </Button>
+            </>
           ) : (
-            <Button 
-              className="w-full" 
-              variant="outline" 
+            <Button
+              className="col-span-2 w-full"
+              variant="outline"
               disabled={product.stock === 0}
             >
-              {product.stock === 0 ? 'Out of Stock' : 'View Details'}
+              Out of Stock
             </Button>
           )}
         </CardFooter>

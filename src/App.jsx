@@ -24,6 +24,7 @@ import AddProduct from './pages/Seller/AddProduct'
 import EditProduct from './pages/Seller/EditProduct'
 import SellerOrders from './pages/Seller/SellerOrders'
 import SellerProfile from './pages/Seller/SellerProfile'
+import About from './pages/About'
 
 // Protected Route Component
 function ProtectedRoute({ children, allowedRoles }) {
@@ -64,6 +65,7 @@ function AppRoutes() {
     <Routes>
       {/* Public Routes */}
       <Route path="/" element={<Landing />} />
+      <Route path="/about" element={<About />} />
       <Route
         path="/auth/login"
         element={
